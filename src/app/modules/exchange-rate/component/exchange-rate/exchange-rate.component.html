@@ -1,10 +1,10 @@
 <div class="container-fluid">
-    <div class="card-header">
-        <h1><i class="fas fa-money-bill-wave"></i> &nbsp; Exchange Rate</h1>
+    <div class="card-header" >
+        <h1 style="color: black;"><i class="fas fa-money-bill-wave"></i> &nbsp; Exchange Rate</h1>
     </div>
 
     <div class="card-body">
-        <h4>Base: {{ exchange_rate.base}}</h4>
+        <h4 style="color: black;">Base: {{ exchange_rate.base}}</h4>
         <form [formGroup]="formulario" (ngSubmit)="ngSubmit()">
             <div class="form-group">            
                 <label for="rate"> Ingresa tasa de cambio</label>

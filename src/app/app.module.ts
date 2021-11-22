@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LayoutModule } from './modules/layout/layout.module';
 import { ExchangeRateModule } from './modules/exchange-rate/exchange-rate.module';
+import { HomeModule } from './modules/home/home.module';
+import { CustomerModule } from  './modules/customer/customer.module';
+import { ProductModule } from './modules/product/product.module'
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { ExchangeRateModule } from './modules/exchange-rate/exchange-rate.module
     AppRoutingModule,
     LayoutModule,
     ExchangeRateModule,
-    HttpClientModule
+    HttpClientModule,
+    HomeModule,
+    CustomerModule,
+    ProductModule
   ],
   providers: [],
   bootstrap: [AppComponent]

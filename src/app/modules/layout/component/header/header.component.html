@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" routerLink="/home">
       <img class="img" src="../../../../../assets/índice.png" alt="" />
     </a>
     <button
@@ -18,7 +18,7 @@
     <div class="collapse navbar-collapse" id="navbarColor02">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="#"
+          <a class="nav-link active" routerLink="/home"
             >Home
             <span class="visually-hidden">(current)</span>
           </a>
@@ -27,13 +27,19 @@
           <a class="nav-link" href="#"><i class="fas fa-user-tie"></i>&nbsp;Clientes</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Regiones</a>
+          <a class="nav-link" routerLink="/region">Regiones</a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="#"><i class="fas fa-shopping-bag"></i>&nbsp;Productos</a>
         </li>
         <li class="nav-item active">
+          <a class="nav-link" routerLink="/category">&nbsp;Categorías</a>
+        </li>
+        <li class="nav-item active">
           <a class="nav-link" href="#"><i class="fas fa-file-invoice-dollar"></i>&nbsp;Facturas</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/exchange-rate">&nbsp;Tasa de cambio</a>
         </li>
         <li class="nav-item dropdown">
           <a

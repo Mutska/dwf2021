@@ -8,7 +8,8 @@ import { LayoutModule } from './modules/layout/layout.module';
 import { ExchangeRateModule } from './modules/exchange-rate/exchange-rate.module';
 import { HomeModule } from './modules/home/home.module';
 import { CustomerModule } from  './modules/customer/customer.module';
-import { ProductModule } from './modules/product/product.module'
+import { ProductModule } from './modules/product/product.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProductModule } from './modules/product/product.module'
     HttpClientModule,
     HomeModule,
     CustomerModule,
-    ProductModule
+    ProductModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

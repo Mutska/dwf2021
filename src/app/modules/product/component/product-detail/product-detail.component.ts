@@ -6,7 +6,8 @@ import { ProductService } from '../../_service/product.service';
 import { ProductImageService } from '../../_service/product-image.service';
 import { CategoryService } from '../../_service/category.service';
 import { FormBuilder, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { CroppedEvent } from 'ngx-photo-editor';
 
 declare var $: any;
@@ -25,8 +26,8 @@ export class ProductDetailComponent implements OnInit {
   gtin: any = null;
 
   // Categorias asociadas al producto
-  categories : Category[] = [];
-  category : Category = new Category();
+  categories: Category[] = [];
+  category: Category = new Category();
 
   // Imagenes del producto
   images: ProductImage[] = [];

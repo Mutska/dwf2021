@@ -181,6 +181,8 @@ export class CustomerDetailComponent implements OnInit {
       res => {
         this.getCustomer(this.rfc);
         this.closeImageModal();
+        console.log("onSubmitImage");
+        console.log(this.image);
         Swal.fire({
           position: 'top-end',
           icon: 'success',
@@ -202,10 +204,14 @@ export class CustomerDetailComponent implements OnInit {
 
   fileChangeEvent(event: any){
     this.imageChangedEvent = event;
+    console.log("inside fileChangEvent");
+    console.log(this.imageChangedEvent);
   }
 
   imageCropped(event: CroppedEvent){
     this.base64 = event.base64;
+    console.log("inside imageCropped");
+    console.log(this.base64);
     this.image.image = this.base64;
   }
 

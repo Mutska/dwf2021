@@ -68,7 +68,7 @@ submitted = false;
       Swal.fire({
         icon: 'error',
         title: 'Error!',
-        text: 'Faltan campos obligatorios por llenar'
+        text: 'Faltan campos obligatorios por llenar',
       })
       return;
     }
@@ -89,7 +89,7 @@ submitted = false;
         Swal.fire({
           icon: 'error',
           title: 'Error!',
-          text: 'El producto no puede ser registrado'
+          text: 'El producto no puede ser registrado',
         })
       }
     )
@@ -99,7 +99,6 @@ submitted = false;
     this.getCategories();
     this.formulario.reset();
     this.formulario.controls['id_category'].setValue(0);
-    console.log("Before product_modal")
     $("#product_modal").modal("show");
   }
 

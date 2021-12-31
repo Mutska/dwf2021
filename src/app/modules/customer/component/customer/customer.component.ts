@@ -3,7 +3,7 @@ import { Customer } from '../../_model/customer';
 import { Region } from '../../_model/region';
 import { CustomerService } from '../../_service/customer.service';
 import { RegionService } from '../../_service/region.service';
-import { Form, FormBuilder, Validators} from '@angular/forms';
+import { FormBuilder, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 
 declare var $: any;

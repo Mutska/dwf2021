@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../_model/product';
+import { DtoProductCategory } from '../../home/_model/dtoProductCategory';
 import { Category } from '../_model/category';
 import { HttpClient } from '@angular/common/http';
 import { ApisURI } from '../../../shared/apis-uri';
@@ -18,6 +19,11 @@ export class ProductService {
 
   getProducts(){
     return this.http.get<Product[]>(this.apiURI + this.resource);
+  }
+
+
+  getProductsRandom(){
+    return this.http.get<DtoProductCategory[]>(this.apiURI + this.resource + "/random");
   }
 
   getProduct(gtin: string){

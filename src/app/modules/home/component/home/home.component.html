@@ -1,4 +1,22 @@
+		<div class="row align-items-center justify-content-center">
+		<div class="col col-sm-4">
+         <form [formGroup]="formularioCategory" (ngSubmit)="onSubmitCategory()">
+            <div class="form-group text-center">            
+                <label for="rate"><h3>Categorías</h3></label>
+                <select class="form-control" formControlName="id_category" id="id_category">
+					<option disabled>Categoria..</option>
+                    <option *ngFor="let category of categories" [ngValue]="category.id_category">{{ category.category }}</option>
+                </select>
+            </div>
+            <div>
+                <br>
+                <button type="submit" class="btn btn-success btn-block"> Seleccionar </button>
+            </div>
+        </form>
+	</div>
+</div>
 <section class="section-products">
+
 		<div class="container">
 				<div class="row justify-content-center text-center">
 						<div class="col-md-8 col-lg-6">

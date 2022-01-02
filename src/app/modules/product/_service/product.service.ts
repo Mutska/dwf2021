@@ -26,6 +26,11 @@ export class ProductService {
     return this.http.get<DtoProductCategory[]>(this.apiURI + this.resource + "/random");
   }
 
+
+  getProductsCategory(id_category: number){
+    return this.http.get<DtoProductCategory[]>(this.apiURI + this.resource + "/category" + `/${id_category}`);
+  }
+
   getProduct(gtin: string){
     return this.http.get<Product>(this.apiURI + this.resource + `/${gtin}`);
   }

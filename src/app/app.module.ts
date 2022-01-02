@@ -9,6 +9,7 @@ import { ExchangeRateModule } from './modules/exchange-rate/exchange-rate.module
 import { HomeModule } from './modules/home/home.module';
 import { CustomerModule } from  './modules/customer/customer.module';
 import { ProductModule } from './modules/product/product.module';
+import { CartModule } from './modules/cart/cart.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({

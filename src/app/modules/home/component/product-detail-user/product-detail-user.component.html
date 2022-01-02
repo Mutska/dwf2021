@@ -33,14 +33,30 @@
                             {{ category.category }}
                         </td>
                     </tr>
+                    <tr>
+                        <th>Cantidad</th>
+                        <td>
+         <form [formGroup]="formularioCart" (ngSubmit)="onSubmitToCart()">
+            <div class="form-group">            
+                <input type="text" class="form-control marginForm" id="quantity" formControlName="quantity" placeholder="Quantity">
+                <div *ngIf="submitted && f.quantity.errors">
+                    <div *ngIf="f.quantity.errors.required">
+                        <span class="text-danger">La cantidad de producto es obligatorio.</span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success btn-block"> Agregar al carrito </button>
+            </div>
+        </form>
+
+
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
         
         </div>
     </div>
-
-
 
 <!-- Images -->
 <div class="cards-img">

@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <!-- Header -->
+    <div class="card">
+    <div class="card-header" >
+        <h3 style="color:black;">
+            &nbsp;&nbsp; Carrito
+        </h3>
+    </div>
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th class="text-center">Producto</th>
+                        <th class="text-center">Precio</th>
+                        <th class="text-center">Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cart of carts">
+                        <td class="text-center">{{ cart.product.product }} </td>
+                        <td class="text-center">{{ cart.product.price }}</td>
+                        <td class="text-center">{{ cart.quantity }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

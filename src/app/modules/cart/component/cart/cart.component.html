@@ -5,6 +5,10 @@
         <h3 style="color:black;">
             &nbsp;&nbsp; Carrito
         </h3>
+        <button (click)="deleteCart()"  type="button" class="btn btn-secondary btn-sm"> 
+            Limpiar carrito
+            <i class="fas fa-trash"></i>
+        </button>
     </div>
 
     <div class="card-body">
@@ -22,6 +26,12 @@
                         <td class="text-center">{{ cart.product.product }} </td>
                         <td class="text-center">{{ cart.product.price }}</td>
                         <td class="text-center">{{ cart.quantity }}</td>
+                        <td>
+                            <button (click)="removeFromCart(cart.id_cart)" type="button" class="btn btn-danger btn-sm">
+                                Eliminar 
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
                     </tr>
                 </tbody>
             </table>

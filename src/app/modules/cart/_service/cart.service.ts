@@ -30,6 +30,6 @@ export class CartService {
   }
 
   deleteCart(rfc: string){
-    return this.http.delete(this.apiURI + this.resource + `/${rfc}`);
+    return this.http.delete(this.apiURI + this.resource + "/clear" + `/${rfc}`);
   }
 }

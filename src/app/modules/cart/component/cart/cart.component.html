@@ -6,9 +6,15 @@
             &nbsp;&nbsp; Carrito
         </h3>
         <button (click)="deleteCart()"  type="button" class="btn btn-secondary btn-sm"> 
-            Limpiar carrito
+            Limpiar carritos
             <i class="fas fa-trash"></i>
         </button>
+         <br>
+         <a routerLink="/purchase"> 
+            <button class="btn btn-outline-dark" type="button">
+                <i class="fas fa-shopping-cart"></i> Proceder a pago
+            </button>
+        </a>
     </div>
 
     <div class="card-body">

@@ -13,6 +13,7 @@ import { CustomerDetailComponent } from '../customer/component/customer-detail/c
 import { ProductComponent } from '../product/component/product/product.component';
 import { ProductDetailComponent } from '../product/component/product-detail/product-detail.component';
 import { CartComponent } from '../cart/component/cart/cart.component';
+import { InvoiceComponent } from '../invoice/component/invoice/invoice.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path: 'customer-detail/:rfc', component: CustomerDetailComponent},
   {path: 'product', component: ProductComponent },
   {path: 'product-detail/:gtin', component: ProductDetailComponent},
-  {path: 'cart', component: CartComponent}
+  {path: 'cart', component: CartComponent},
+  {path: 'invoice', component: InvoiceComponent}
 ];
 
 @NgModule({

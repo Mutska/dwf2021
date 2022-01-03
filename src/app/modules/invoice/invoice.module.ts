@@ -10,6 +10,9 @@ import { InvoiceComponent } from './component/invoice/invoice.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+     InvoiceComponent,
   ]
 })
 export class InvoiceModule { }

@@ -6,6 +6,7 @@ import { RegionComponent } from '../app/modules/customer/component/region/region
 import { CategoryComponent } from '../app/modules/product/component/category/category.component';
 import { CartComponent } from './modules/cart/component/cart/cart.component';
 import { PurchaseComponent } from './modules/cart/component/purchase/purchase.component';
+import { InvoiceComponent } from './modules/invoice/component/invoice/invoice.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},

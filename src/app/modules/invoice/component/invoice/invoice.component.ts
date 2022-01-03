@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Invoice } from '../../_model/invoice';
 import { InvoiceService } from '../../_service/invoice.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-invoice',
@@ -15,7 +16,8 @@ export class InvoiceComponent implements OnInit {
   invoices: Invoice[] = [];
 
   constructor(
-    private invoice_service: InvoiceService
+    private invoice_service: InvoiceService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -32,8 +34,9 @@ export class InvoiceComponent implements OnInit {
     )
   }
 
-  invoiceDetail(id_invoice: number){
-
-  }
+  invoiceDetail(rfc: string, id_invoice: number){
+  // Redireccionar a detalle del producto
+    this.router.navigate(['invoice-detail/'+ rfc + '/' + id_invoice]);
+}
 
 }

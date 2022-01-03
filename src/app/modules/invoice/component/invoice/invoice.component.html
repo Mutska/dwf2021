@@ -30,7 +30,7 @@
                         <td class="text-center">$ {{ invoice.total }}</td>
                         <td class="text-center">{{ invoice.created_at }}</td>
                         <td>
-                            <button (click)="invoiceDetail(invoice.id_invoice)"  type="button" class="btn btn-secondary btn-sm"> 
+                            <button (click)="invoiceDetail(invoice.rfc, invoice.id_invoice)"  type="button" class="btn btn-secondary btn-sm"> 
                                 Ver detalle
                                 <i class="fas fa-gift"></i>
                             </button>

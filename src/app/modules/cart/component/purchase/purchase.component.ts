@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InvoiceService } from 'src/app/modules/invoice/_service/invoice.service';
+import { Router } from '@angular/router';
 
 import Swal from 'sweetalert2';
 @Component({
@@ -12,7 +13,8 @@ export class PurchaseComponent implements OnInit {
   private rfc = "SAIV920101A00";
 
   constructor(
-    private invoice_service: InvoiceService
+    private invoice_service: InvoiceService,
+    private router: Router
   ) { 
   }
 
@@ -99,7 +101,8 @@ export class PurchaseComponent implements OnInit {
              title: 'Compra exitosa',
              showConfirmButton: false,
              timer: 1500
-           })
+           });
+          this.router.navigate(['invoice/']);
          },
          err => {
            console.log(err);

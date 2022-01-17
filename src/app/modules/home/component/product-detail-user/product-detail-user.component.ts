@@ -137,7 +137,7 @@ export class ProductDetailUserComponent implements OnInit {
         Swal.fire({
           icon: 'error',
           title: 'Error!',
-          text: 'El producto no se agrego al carrito',
+          text: 'Cantidad inválida de producto',
         })
      }
     )

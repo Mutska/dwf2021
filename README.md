@@ -44,7 +44,17 @@ de ejecución de los scripts para evitar conflictos es el siguiente:
 
 ## 6. Abrir Spring Tools e importar como `Existing maven projects` la carpeta de la [API](https://github.com/ivansaavedra/dwf20221-api)
 
-## 7. Configurar
+## 7. Configurar el nombre de la base de datos en el archivo `application.properties` asi como la contraseña y la base de datos.
+
+## 8. Ejecutar la API como `Run as Spring Boot App`, detener e ir a `Run Configurations` en la sección de enviroment, agregar la variable `producto.img.path`
+con la ruta de la carpeta donde se guardarán las imágenes.
+
+## 9. Ejecutar de nuevo la API.
+
+## 10. Descargar este repositorio y ejecutar el comando `npm ci` en terminal para  instalar las dependencias necesarias, si hay un problema ejecutar el siguiente comando `npm install -g @angular/cli`
+
+## 11. Finalmente ejecutar `ng serve` para levantar la pagina en `http://localhost:4200/`
+      
 
 
 

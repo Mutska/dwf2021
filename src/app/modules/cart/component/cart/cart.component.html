@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <!-- Header -->
+    <div class="card">
+    <div class="card-header" >
+        <h3 style="color:black;">
+            &nbsp;&nbsp; Carrito
+        </h3>
+        <button (click)="deleteCart()"  type="button" class="btn btn-secondary btn-sm"> 
+            Limpiar carritos
+            <i class="fas fa-trash"></i>
+        </button>
+         <br>
+         <a routerLink="/purchase"> 
+            <button class="btn btn-outline-dark" type="button">
+                <i class="fas fa-shopping-cart"></i> Proceder a pago
+            </button>
+        </a>
+    </div>
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th class="text-center">Producto</th>
+                        <th class="text-center">Precio</th>
+                        <th class="text-center">Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cart of carts">
+                        <td class="text-center">{{ cart.product.product }} </td>
+                        <td class="text-center">{{ cart.product.price }}</td>
+                        <td class="text-center">{{ cart.quantity }}</td>
+                        <td>
+                            <button (click)="removeFromCart(cart.id_cart)" type="button" class="btn btn-danger btn-sm">
+                                Eliminar 
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

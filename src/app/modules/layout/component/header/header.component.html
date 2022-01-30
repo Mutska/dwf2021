@@ -1,0 +1,99 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/home">
+      <img class="img" src="../../../../../assets/índice.png" alt="" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarColor02"
+      aria-controls="navbarColor02"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/home"
+            >Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/customer"><i class="fas fa-user-tie"></i>&nbsp;Clientes</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/region">Regiones</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/product"><i class="fas fa-shopping-bag"></i>&nbsp;Productos</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/category">&nbsp;Categorías</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/invoice"><i class="fas fa-file-invoice-dollar"></i>&nbsp;Facturas</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/exchange-rate">&nbsp;Tasa de cambio</a>
+        </li>
+      </ul>
+      <form
+        class="
+          d-none d-md-inline-block
+          form-inline
+          ms-auto
+          me-0 me-md-3
+          my-2 my-md-0
+        "
+      >
+        <div class="input-group">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Buscar..."
+            aria-label="Buscar..."
+            aria-describedby="btnNavbarSearch"
+          />
+          <button class="btn btn-dark" id="btnNavbarSearch" type="button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </form>
+      <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdown"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            ><i class="fas fa-user fa-fw"></i
+          ></a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdown"
+          >
+            <li><a class="dropdown-item" href="#!">Mi Cuenta</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#!">Cerrar Sesión</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+        
+         <a routerLink="/cart"> 
+        <button class="btn btn-outline-dark" type="button">
+          <i class="fas fa-shopping-cart"></i> Carrito
+          <!-- <span class="badge bg-dark text-white ms-1 rounded-pill">{{numProducts}}</span>-->
+        </button>
+      </a>
+      </form>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,52 @@
+		<div class="row align-items-center justify-content-center">
+		<div class="col col-sm-4">
+         <form [formGroup]="formularioCategory" (ngSubmit)="onSubmitCategory()">
+            <div class="form-group text-center">            
+                <label for="rate"><h3>Categorías</h3></label>
+                <select class="form-control" formControlName="id_category" id="id_category">
+					<option disabled>Categoria..</option>
+                    <option *ngFor="let category of categories" [ngValue]="category.id_category">{{ category.category }}</option>
+                </select>
+            </div>
+            <div>
+                <br>
+                <button type="submit" class="btn btn-success btn-block"> Seleccionar </button>
+            </div>
+        </form>
+	</div>
+</div>
+<section class="section-products">
+
+		<div class="container">
+				<div class="row justify-content-center text-center">
+						<div class="col-md-8 col-lg-6">
+								<div class="header">
+										<h2>Productos</h2>
+								</div>
+						</div>
+				</div>
+
+				<div class="row">
+
+						<div *ngFor="let product of products"  class="col-md-6 col-lg-4 col-xl-3">
+
+								<div class="single-product">
+
+										<div class="part-1">
+                    <img class="img-fluid"  src="assets/{{product.images[0].image}}" alt="image">
+												<ul>
+														<li><a routerLink="/product-detail-user/{{product.gtin}}"><i class="fas fa-expand"></i></a></li>
+												</ul>
+										</div>
+
+										<div class="part-2">
+												<h3 class="product-title">{{ product.product }}</h3>
+												<h4 class="product-price">$ {{ product.price }}</h4>
+										</div>
+
+								</div>
+						</div>
+
+				</div>
+		</div>
+</section>

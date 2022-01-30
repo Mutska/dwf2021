@@ -1,0 +1,68 @@
+<div class="container-fluid">
+    <!-- Header -->
+    <div class="card">
+    <div class="card-header" >
+        <h3 style="color:black;">
+            &nbsp;&nbsp;{{ product.product }}
+        </h3>
+    </div>
+
+    <!-- Body -->
+    <div class="card-body">
+            <table class="table" style="width: 100%">
+                <tbody>
+                    <tr>
+                        <th>GTIN</th>
+                        <td>{{ product.gtin }} </td>
+                    </tr>
+                    <tr>
+                        <th>Descripción</th>
+                        <td>{{ product.description }}</td>
+                    </tr>
+                    <tr>
+                        <th>Precio</th>
+                        <td>{{ product.price }}</td>
+                    </tr>
+                    <tr>
+                        <th>Cantidad en Stock</th>
+                        <td>{{ product.stock }}</td>
+                    </tr>
+                    <tr>
+                        <th>Categoría a la que pertenece</th>
+                        <td>
+                            {{ category.category }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Cantidad</th>
+                        <td>
+         <form [formGroup]="formularioCart" (ngSubmit)="onSubmitToCart()">
+            <div class="form-group">            
+                <input type="text" class="form-control marginForm" id="quantity" formControlName="quantity" placeholder="Quantity">
+                <div *ngIf="submitted && f.quantity.errors">
+                    <div *ngIf="f.quantity.errors.required">
+                        <span class="text-danger">La cantidad de producto es obligatorio.</span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success btn-block"> Agregar al carrito </button>
+            </div>
+        </form>
+
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        </div>
+    </div>
+
+<!-- Images -->
+<div class="cards-img">
+    <div *ngFor="let img of images" class="card card-img" style="width: 18rem;">
+        <img class="card-img-top" src="assets/{{img.image}}" alt="Card image cap">
+        <div class="card-body text-center">
+        </div>
+    </div>
+</div>
